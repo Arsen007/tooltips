@@ -1,0 +1,12 @@
+{
+  "name": "Arsen007/tooltip",
+  "description": "code tooltips",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Arsen",
+      "email": "arsendev1@gmail.com"
+    }
+  ]
+}
