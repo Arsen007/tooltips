@@ -1,0 +1,17 @@
+{
+  "name": "tooltips",
+  "version": "1.0",
+  "homepage": "arsen-sargsyan.info",
+  "authors": [
+    "Arsen"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower",
+    "test",
+    "tests"
+  ]
+}
