@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "highlightjs": "~8.4.0"
+    "highlightjs": "~8.4.0",
+    "zeroclipboard": "~2.2.0"
   }
 }

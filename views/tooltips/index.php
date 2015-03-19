@@ -85,7 +85,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => 'Language',
                 'format' => 'raw',
                 'value' => function ($data) {
-                    return $data->category ? $data->category->name:'';
+                    return $data->prLang ? $data->prLang->name:'';
                 }
             ],
             [

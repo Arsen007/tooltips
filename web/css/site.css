@@ -97,3 +97,13 @@ a.desc:after {
 .nav-sidebar > .active > a.remove-filter{
     cursor: pointer;
 }
+
+.copy-btn {
+    float: right;
+    background: url("/images/copy-black.svg");
+    border: none;
+    background-size: 100%;
+    height: 55px;
+    width: 45px;
+    margin: 5px;
+}
