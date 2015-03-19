@@ -74,19 +74,25 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
 //        'filterModel' => $searchModel,
         'columns' => [
-            'title',
+            [
+                'attribute' => 'title',
+                'format' => 'html',
+                'value' => function($data){
+                    return Html::a($data->title,['tooltips/view','id'=>$data->id]);
+                }
+            ],
             [
                 'label' => 'Language',
                 'format' => 'raw',
                 'value' => function ($data) {
-                    return $data->prLang->name;
+                    return $data->category ? $data->category->name:'';
                 }
             ],
             [
                 'label' => 'Category',
                 'format' => 'raw',
                 'value' => function ($data) {
-                    return $data->category->name;
+                    return $data->category?$data->category->name:'';
                 }
             ],
             [

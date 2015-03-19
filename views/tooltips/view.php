@@ -9,7 +9,13 @@ use \app\models\Categories;
 /* @var $model app\models\Tooltips */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Tooltips', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = ['label' => 'Tooltips', 'url' => ['index']];
+if($model->pr_lang_id){
+    $this->params['breadcrumbs'][] = ['label' => PrLang::findOne($model->pr_lang_id)->name, 'url' => ['index','pr_lang_id'=>$model->pr_lang_id]];
+}
+if($model->category_id){
+    $this->params['breadcrumbs'][] = ['label' => Categories::findOne($model->category_id)->name, 'url' => ['index','category_id'=>$model->category_id]];
+}
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tooltips-view">
@@ -27,17 +33,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= $model->title ?></h1>
     <pre><code class="<?= mb_strtolower(PrLang::findOne($model->pr_lang_id)->name)?>"><?= $model->code;?></code></pre>
-
+    <?php
+    $language = PrLang::findOne($model->pr_lang_id);
+    $category = Categories::findOne($model->category_id);
+    ?>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             [
                 'label'=> 'Language',
-                'value' => PrLang::findOne($model->pr_lang_id)->name
+                'value' => $language?$language->name:''
             ],
             [
                 'label'=> 'Category',
-                'value' => Categories::findOne($model->category_id)->name
+                'value' => $category?$category->name:''
             ],
         ],
     ]) ?>
