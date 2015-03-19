@@ -2,7 +2,12 @@ html,
 body {
     height: 100%;
 }
-
+table{
+    font-size:18px ;
+}
+code{
+    font-size: 16px!important;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -89,9 +94,13 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+.nav-sidebar a{
+    font-size:16px;
+}
 .nav-sidebar > .active > a{
     background-color: #eee;
     cursor: default;
+    font-weight:bold ;
 }
 
 .nav-sidebar > .active > a.remove-filter{
