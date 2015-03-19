@@ -66,6 +66,7 @@ class TooltipsSearch extends Tooltips
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'code', $this->code]);
 
+        $query->orderBy('id DESC');
         return $dataProvider;
     }
 }

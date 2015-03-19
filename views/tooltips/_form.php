@@ -22,7 +22,7 @@ use \app\models\Categories;
 
     <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map(Categories::find()->all(), 'id', 'name'),['prompt'=>'Select category']) ?>
 
-    <?= $form->field($model, 'code')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'code')->textarea(['rows' => 15]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

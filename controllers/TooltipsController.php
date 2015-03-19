@@ -15,7 +15,6 @@ use yii\filters\VerbFilter;
 class TooltipsController extends Controller
 {
 
-    public $layout = 'column2';
     public function behaviors()
     {
         return [
@@ -34,6 +33,8 @@ class TooltipsController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'column2';
+
         $searchModel = new TooltipsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -50,7 +51,6 @@ class TooltipsController extends Controller
      */
     public function actionView($id)
     {
-        $this->layout = 'main';
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

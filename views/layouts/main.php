@@ -16,6 +16,7 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -26,7 +27,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => '{Code Tooltip Notebook}',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse',
@@ -35,14 +36,14 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
+                    ['label' => 'Tooltips', 'url' => ['/tooltips/index']],
                     ['label' => 'Categories', 'url' => ['/categories/index']],
                     ['label' => 'Programming Languages', 'url' => ['/pr-lang/index']],
-                    ['label' => 'Tooltips', 'url' => ['/tooltips/index']],
-                    Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+//                    Yii::$app->user->isGuest ?
+//                        ['label' => 'Login', 'url' => ['/site/login']] :
+//                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+//                            'url' => ['/site/logout'],
+//                            'linkOptions' => ['data-method' => 'post']],
                 ],
             ]);
             NavBar::end();

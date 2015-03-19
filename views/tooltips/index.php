@@ -89,11 +89,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->category->name;
                 }
             ],
-//            'code:ntext',
-            // 'created_at',
-            // 'updated_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} &nbsp{update} &nbsp{delete}'
+            ],
         ],
     ]); ?>
 
