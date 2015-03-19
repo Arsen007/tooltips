@@ -10,9 +10,9 @@ body {
     padding: 0 0 60px;
 }
 
-.wrap > .container {
-    padding: 70px 15px 20px;
-}
+/*.wrap > .container {*/
+    /*padding: 70px 15px 20px;*/
+/*}*/
 
 .footer {
     height: 60px;
@@ -88,4 +88,12 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+.nav-sidebar > .active > a{
+    background-color: #eee;
+    cursor: default;
+}
+
+.nav-sidebar > .active > a.remove-filter{
+    cursor: pointer;
 }

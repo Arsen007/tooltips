@@ -12,7 +12,9 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+    "dbrisinajumi/yii2-giiant": "0.1.0",
+    "cbd/yii2-gii-generators": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
