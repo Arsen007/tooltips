@@ -28,5 +28,6 @@ class AppAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset',
         'app\assets\HighlightJsAsset',
         'app\assets\ZeroClipboardAsset',
+        'app\assets\AceAsset',
     ];
 }
