@@ -32,8 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <h1><?= $model->title ?></h1>
-    <button class="copy-btn" data-clipboard-text="<?= $model->code;?>" title="Click to copy"></button>
-    <pre><code class="<?= mb_strtolower(PrLang::findOne($model->pr_lang_id)->name)?>"><?= $model->code;?></code></pre>
+    <button class="copy-btn" data-clipboard-text="<?= Html::encode($model->code);?>" title="Click to copy"></button>
+    <pre><code class="<?= mb_strtolower(PrLang::findOne($model->pr_lang_id)->name)?>"><?= Html::encode($model->code);?></code></pre>
     <?php
     $language = PrLang::findOne($model->pr_lang_id);
     $category = Categories::findOne($model->category_id);
